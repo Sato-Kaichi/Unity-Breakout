@@ -18,12 +18,13 @@ public class GameMaster : MonoBehaviour
     nowTime += Time.deltaTime;
     if (boxNum <= 0)
     {
-      GameOver();
+      GameOver(nowTime.ToString("F0") + "秒でクリアできた！");
     }
   }
 
-  public void GameOver()
+  public void GameOver(string resultMessage)
   {
+    DataSender.resultMessage = resultMessage;
     SceneManager.LoadScene("Result");
   }
 }
