@@ -16,6 +16,7 @@ public class WallOut : MonoBehaviour
 
   private void OnCollisionEnter(Collision collision)
   {
-    GameObject.Find("Master").GetComponent<GameMaster>().GameOver("ゲーム失敗。また挑戦しよう。");
+    GameObject.Find("Master").GetComponent<GameMaster>().GameOver("次ファイト。");
+
   }
 }
